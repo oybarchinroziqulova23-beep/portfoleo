@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ro'ziqulova Oybarchin | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        ✅ <span id="toastMsg">Xabar yuborildi!</span>
+    </div>
+
+    <!-- Navbar -->
+    <nav>
+
+        <div class="logo">
+            dev.portfolio
+        </div>
+
+        <div class="nav-links">
+            <a href="#hero" data-i18n="nav.home">Bosh sahifa</a>
+            <a href="#skills" data-i18n="nav.skills">Ko'nikmalar</a>
+            <a href="#projects" data-i18n="nav.projects">Loyihalar</a>
+            <a href="#contact" data-i18n="nav.contact">Aloqa</a>
+        </div>
+
+        <div class="nav-controls">
+
+            <button class="lang-toggle"
+                    id="langBtn"
+                    onclick="toggleLang()">
+                EN
+            </button>
+
+            <button class="icon-btn"
+                    id="themeBtn"
+                    onclick="toggleTheme()">
+                🌙
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero">
+
+        <div class="hero-glow"></div>
+        <div class="hero-glow2"></div>
+
+        <div class="hero-tag"
+             data-i18n="hero.tag">
+            Full Stack Developer
+        </div>
+
+        <h1 data-i18n="hero.title">
+            Salom, men
+            <br>
+            <span class="highlight"
+                  data-i18n="hero.name">
+                Ro'ziqulova Oybarchin
+            </span>
+        </h1>
+
+        <p class="hero-desc"
+           data-i18n="hero.desc">
+            Men zamonaviy va foydalanuvchilar uchun qulay web-ilovalar yarataman.
+        </p>
+
+        <div class="hero-btns">
+
+            <a href="#projects"
+               class="btn-primary"
+               data-i18n="hero.btn1">
+                Loyihalarni ko'rish →
+            </a>
+
+            <a href="#contact"
+               class="btn-secondary"
+               data-i18n="hero.btn2">
+                Bog'lanish
+            </a>
+
+        </div>
+
+        <div class="scroll-hint">
+
+            <span data-i18n="hero.scroll">
+                Pastga aylantiring
+            </span>
+
+            <div class="scroll-line"></div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <div class="section-label"
+             data-i18n="skills.label">
+            Ko'nikmalar
+        </div>
+
+        <h2 class="section-title animate"
+            data-i18n="skills.title">
+            Foydalanadigan texnologiyalar
+        </h2>
+
+        <p class="section-sub"
+           data-i18n="skills.sub">
+            Zamonaviy texnologiyalar bilan ishlash tajribasi.
+        </p>
+
+        <div class="skills-grid"
+             id="skillsGrid">
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <div class="section-label"
+             data-i18n="proj.label">
+            Portfolio
+        </div>
+
+        <h2 class="section-title animate"
+            data-i18n="proj.title">
+            Tanlangan loyihalar
+        </h2>
+
+        <p class="section-sub"
+           data-i18n="proj.sub">
+            Real muammolarni hal qiluvchi loyihalar.
+        </p>
+
+        <div class="projects-grid"
+             id="projectsGrid">
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <div class="contact-wrap animate">
+
+            <div class="section-label"
+                 data-i18n="contact.label">
+                Aloqa
+            </div>
+
+            <h2 class="section-title"
+                data-i18n="contact.title">
+                Birgalikda ishlaylik
+            </h2>
+
+            <p class="section-sub"
+               data-i18n="contact.sub">
+                Loyiha yoki savol bo'lsa yozing.
+            </p>
+
+            <div class="form-group">
+                <label data-i18n="contact.name">
+                    Ismingiz
+                </label>
+
+                <input type="text"
+                       id="cName"
+                       placeholder="Ismingiz">
+            </div>
+
+            <div class="form-group">
+                <label data-i18n="contact.email">
+                    Email
+                </label>
+
+                <input type="email"
+                       id="cEmail"
+                       placeholder="email@example.com">
+            </div>
+
+            <div class="form-group">
+
+                <label data-i18n="contact.msg">
+                    Xabar
+                </label>
+
+                <textarea id="cMsg"
+                          placeholder="Xabaringizni yozing...">
+                </textarea>
+
+            </div>
+
+            <button class="btn-primary form-submit"
+                    onclick="submitForm()"
+                    data-i18n="contact.send">
+
+                Xabar yuborish →
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <h2>📞 Bog'lanish</h2>
+
+            <div class="contact-links">
+
+                <a href="https://github.com/oybarchinroziqulova23-beep"
+                   target="_blank">
+                    🐙 GitHub
+                </a>
+
+                <a href="@Rinn1114"
+                   target="_blank">
+                    ✈️ Telegram
+                </a>
+
+                <a href="tel:+998930047952">
+                    📱 +998 93 004 79 52
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Ro'ziqulova Oybarchin.
+                Barcha huquqlar himoyalangan.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
